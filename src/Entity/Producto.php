@@ -17,7 +17,7 @@ class Producto
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=20)
+     * @ORM\Column(type="string", length=100)
      */
     private $nombre;
 
@@ -27,15 +27,9 @@ class Producto
     private $precio;
 
     /**
-     * @ORM\Column(type="string", length=200)
+     * @ORM\Column(type="string", length=100)
      */
     private $descripcion;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Categoria", inversedBy="productos")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $categoria;
 
     public function getId()
     {
@@ -74,18 +68,6 @@ class Producto
     public function setDescripcion(string $descripcion): self
     {
         $this->descripcion = $descripcion;
-
-        return $this;
-    }
-
-    public function getCategoria(): ?Categoria
-    {
-        return $this->categoria;
-    }
-
-    public function setCategoria(?Categoria $categoria): self
-    {
-        $this->categoria = $categoria;
 
         return $this;
     }

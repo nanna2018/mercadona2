@@ -19,17 +19,17 @@
                 <td>{{ categorium.id }}</td>
                 <td>{{ categorium.nombre }}</td>
                 <td>
-                    <a href="{{ path('categoria_show', {'id': categorium.id}) }}">show</a>
-                    <a href="{{ path('categoria_edit', {'id': categorium.id}) }}">edit</a>
+                    <a href="{{ path('categoria_show', {'id': categorium.id}) }}">Nuevo</a>
+                    <a href="{{ path('categoria_edit', {'id': categorium.id}) }}">Editar</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="3">no records found</td>
+                <td colspan="3">No se encontró archivo</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('categoria_new') }}">Create new</a>
+    <a href="{{ path('categoria_new') }}">Crear nuevo</a>
 {% endblock %}

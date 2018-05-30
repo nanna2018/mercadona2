@@ -2,26 +2,26 @@
 
 namespace App\Form;
 
-use App\Entity\Producto;
+use App\Entity\Cantidad;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class ProductoType extends AbstractType
+class CantidadType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('nombre')
-            ->add('precio')
-            ->add('descripcion')
+            ->add('cantidad')
+            ->add('pedidos')
+            ->add('productos')
         ;
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Producto::class,
+            'data_class' => Cantidad::class,
         ]);
     }
 }
