@@ -11,10 +11,12 @@ Encore
     // will create public/build/app.js and public/build/app.css
 
     //añadir addEntry y addStyleEntry.OJO
-    . addEntry ( 'app' , './assets/js/app.js' )
+    .addEntry ( 'app' , './assets/js/app.js' )
+
     //. addEntry ( 'midatatable' , './assets/js/midatatable.js' )
     . addStyleEntry('appstyle','./assets/css/app.css')
-
+    .addStyleEntry('main','./assets/css/main.css')
+    .addStyleEntry('tienda','./assets/css/tienda.css')
     // allow legacy applications to use $/jQuery as a global variable
     . autoProvidejQuery ()
 

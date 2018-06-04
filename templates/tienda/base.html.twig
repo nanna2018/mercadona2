@@ -1,5 +1,19 @@
- 
+{% extends 'base.html.twig' %}
+{% block stylesheets_extra %}
+	<link rel='stylesheet' href="{{ asset('build/main.css')}}">
 
+{% endblock %}
+{% block header %}
+<header>
+
+
+</header>
+{% endblock %}
+
+
+
+
+{% block footer %}
 <footer>
  <div class="row">
 		<div class="col">
@@ -48,4 +62,6 @@
           
         </form>
 
-      </footer>
+
+</footer>
+{% endblock %}
