@@ -1,11 +1,37 @@
 {% extends 'base.html.twig' %}
 {% block stylesheets_extra %}
-	<link rel='stylesheet' href="{{ asset('build/main.css')}}">
+  <link rel='stylesheet' href="{{ asset('build/tienda.css')}}">
 
 {% endblock %}
 {% block header %}
 <header>
-
+  
+  
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+   <img  class="logo"src="http://static.ideal.es/www/multimedia/201706/23/media/cortadas/mercd-kfM--624x385@Ideal.jpg" width="200" margin-left="60px">
+   <form class="form-inline my-2 my-lg-0">
+     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    </form>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Categorias</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Más habituales</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#"></a>
+      </li>
+    </ul>
+   
+  </div>
+</nav>
 
 </header>
 {% endblock %}
@@ -15,53 +41,10 @@
 
 {% block footer %}
 <footer>
- <div class="row">
-		<div class="col">
-      <ul>
-         <dt><h4>Clientes</h4></dt>
-         <dt><a href="">Supermercado</a></dt>
-         <dt><a href="">Consejos</a></dt>
-        <dt><a href="">Tarjeta mercadona</a></dt>
-         <dt><a href="">Factura cliente</a></dt>
-      </ul>
-     </div>
-       <div class="col">
-       <ul>
-         <dt><h4>Trabajador</h4></dt>
-         <dt><a href="">Trabaja con nosotros</a></dt>
-       </ul>
-       </div>
-        <div class="col">
-       <ul>
-         <dt><h4>Proveedor</h4></dt>
-         <dt><a href="">E-factutas proveedores</a></dt>
-         <dt><a href="">Portal Trinidad</a></dt>
-       </ul>
-       </div>
-       <div class="col">
-       <ul>
-         <dt><h4>Sociedad</h4></dt>
-         <dt><a href="">Actualidad</a></dt>
-         <dt><a href="">Conoce Mercadona</a></dt>
-         <dt><a href="">Mercadona en Portugal</a></dt>
-       </ul>
-       </div>
-       <div class="col">
-       <ul>
-         <dt><i class="far fa-envelope"></i>Contacto</dt>
-         <dt><i class="fas fa-phone-volume"></i>900500103</dt>
-         <dt><i class="fab fa-facebook"><i class="fab fa-twitter-square"><i class="fab fa-youtube"><i class="fab fa-instagram"></i></i></i></i></dt>
-       </ul>
-       </div>
-
-        <form action="{{ path('recibe_form') }}" method="POST">
-        <div>
-        <input type="text" name="inputcp" placeholder="Codigo postal">
-         
-          <button type="submit"class="btn btn-sucess mb-2" >Entrar<i class="fas fa-arrow-ringt"></i></button>
-          
-        </form>
-
-
+ 
 </footer>
 {% endblock %}
+
+
+
+

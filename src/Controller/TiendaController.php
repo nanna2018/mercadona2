@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controller;
-
+use App\Entity\Producto;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -12,15 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
      */
 class TiendaController extends Controller
 {
-    /**
-     * @Route("/", name="tienda")
-     */
-    public function index()
-    {
-        return $this->render('tienda/index.html.twig', [
-            'controller_name' => 'TiendaController',
-        ]);
-    }
+    
 
     /**
      * @Route("/postal", name="recibe_form")
@@ -42,9 +34,11 @@ class TiendaController extends Controller
      * @Route("/", name="tienda_home")
      */
     public function cargarPrincipalTienda(Request $request)
-    {
+    {   
+        $repo=$this->getDoctrine()->getRepository(Producto::class);
+        $vectorproductos= $repo->findAll();
         return $this->render('tienda/index.html.twig', [
-            'controller_name' => 'TiendaController',
+            'productos' => $vectorproductos,
         ]);
    	}
     
