@@ -2,20 +2,79 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
 
-
-
-#primer{
-color: white;
-margin-left: 80px;
+nav > img{
+	margin-left: 20px;
+	 width:20%;
+}
+form > button > input {
+	margin-left: 100px;
 
 }
+div > ul> li {
+margin-left: 50px;
+
+}
+   div.input-group >button{
+   	margin-left: 600px;
+   }
+
+ 
+body{
+	margin: 0px;
+
+}
+.container1{
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	display:flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+
+}
+	
+
+.row > div.a{
+background-color: #65a4a4;
+color: white;
+font-size:  PT Serif;
+border-radius: 5px 0px 0px 5px;
+-moz-border-radius: 5px 0px 0px 5px;
+-webkit-border-radius: 5px 0px 0px 5px;
+border: 0px solid #000000;
+text-align: center;
+
+min-height: 196px;
+padding-left: 30px;
+padding-top:  50px;
+}
+
+
+
+#fruta{
+	border-radius: 0px 5px 5px 0px;
+-moz-border-radius: 0px 5px 5px 0px;
+-webkit-border-radius: 0px 5px 5px 0px;
+border: 0px solid #000000;
+min-height: 196px;
+
+
+}
+
+.a{
+background-color: #8bb6b6;
+color: white;
+}
+
+
 .container{
 width: 100%;
 
 }
 .col15{
 	margin:10px;
-	font-size: 18px;
+	font-size: 12px;
 	width: 15%;
 	min-height: 460px;
 	border-radius: 80px;
@@ -26,4 +85,33 @@ width: 100%;
 }
 .col15 >button {
 	border-radius:100px;
+}
+.card-title1{
+	color: #908f8b;
+}
+div.card-body > button#producto{
+
+
+border-radius: 61px 61px 61px 61px;
+-moz-border-radius: 61px 61px 61px 61px;
+-webkit-border-radius: 61px 61px 61px 61px;
+border: 1px ridge #d1a41e;
+border-color: #fcba37;
+color: #c06307;	
+}
+button#producto:hover{
+
+	background: #fcb831;
+}
+div.col15 >div.card{
+	border-radius: 15px 15px 15px 15px;
+-moz-border-radius: 15px 15px 15px 15px;
+-webkit-border-radius: 15px 15px 15px 15px;
+border: px solid #000000;
+}
+div.col15 > div.card:hover{
+	-webkit-box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.15);
+-moz-box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.15);
+box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.15);
+
 }
