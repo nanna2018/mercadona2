@@ -31,6 +31,17 @@ class Producto
      */
     private $descripcion;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $imagen;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Categoria")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $categoria;
+
     public function getId()
     {
         return $this->id;
@@ -68,6 +79,30 @@ class Producto
     public function setDescripcion(string $descripcion): self
     {
         $this->descripcion = $descripcion;
+
+        return $this;
+    }
+
+    public function getImagen(): ?string
+    {
+        return $this->imagen;
+    }
+
+    public function setImagen(string $imagen): self
+    {
+        $this->imagen = $imagen;
+
+        return $this;
+    }
+
+    public function getCategoria(): ?Categoria
+    {
+        return $this->categoria;
+    }
+
+    public function setCategoria(?Categoria $categoria): self
+    {
+        $this->categoria = $categoria;
 
         return $this;
     }

@@ -17,47 +17,32 @@
                 <a href="#" class="btn btn-primary">Ver productos</a>
            </div>
         <div class="col">
-          <img src="https://storage.googleapis.com/itg_statics_mimercadona/media/seasons/banners/banner_healthy.jpg" width="350">
+          <img src="https://storage.googleapis.com/itg_statics_mimercadona/media/seasons/banners/banner_healthy.jpg" width="300">
            </div>
         </div>
       </div>
 
-   
 
-     
-
-
-      
-  
-       {% for producto in productos %}
-        <div class="container-fluid">
-          <div class="container">
-          <div class="card-deck">
-           <div class="row">
-                <div class="Scol-lg-3 col-md-4 col-sm-6">
-                  <div class="card">
-                        <img class="card-img-top" src="Https://prod-mercadona.imgix.net/20180604/16/69416/69416_00_07.jpg?fit=crop&h=600&w=600" alt="Card image cap" width="100">
-                          <h5 class="card-title">{{ producto.nombre }}</h5>
-                          <p class="card-text">{{ producto.precio }}.</p>
-                          <p class="card-text">{{ producto.descripcion }}.</p>                       
-                           <button type="button" class="btn btn-outline-warning">Añadir al carro</button>
-                  </div>
-            </div>
-          </div>  
-        </div> 
+<div id="productos"class="container">
+      <div class="row">
+      {% for producto in productos %}
+        <div class="col15"> 
+        <div class="card">
+          <img src="{{ producto.imagen }}" alt="Symfony!" />
+          <div class="card-body">
+            <p class="card-title">{{ producto.nombre }}</p>
+            <p class="card-title">{{ producto.descripcion }}</p>
+            <p class="card-text"><b>{{ producto.precio|number_format(2, '.', ',') }} €</b>/ud.</p>
+            <div class="dropdown-divider"></div>
+            <button type="button" class="btn btn-outline-warning" border-radius:"30px">Añadir al carro</button>
+          </div>
         </div>
-        </div>   
-                        {% endfor %}
- 
-  
-                       
-    
-         
-       
-  
+      </div>
 
+      {% endfor %}
+    </div>
+     </div>
   </body>
-  
 {% endblock %}
 
 

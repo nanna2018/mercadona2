@@ -9,15 +9,21 @@ color: white;
 margin-left: 80px;
 
 }
-.card-img-top{
-width:100%;
+.container{
+width: 100%;
 
 }
-.col{
-padding-left: 30px;
-padding-right: 30px;
-padding-top: 50px;
-padding-bottom: 50px;
+.col15{
+	margin:10px;
+	font-size: 18px;
+	width: 15%;
+	min-height: 460px;
+	border-radius: 80px;
 
-
+}
+.col15 img{
+	width: 100%;
+}
+.col15 >button {
+	border-radius:100px;
 }
